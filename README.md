@@ -10,7 +10,7 @@ To install KlipperPLR Klipper, follow the steps below:
 ## Installation
 * Clone the KlipperPLR Klipper repository from GitHub to your local machine:
     ```bash
-    git clone https://github.com/bigtreetech/KlipperPLR.git
+    git clone https://github.com/Kobra-S1/KlipperPLR.git
     cd KlipperPLR
     ./install.sh
     ```

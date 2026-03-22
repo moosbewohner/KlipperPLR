@@ -8,6 +8,13 @@ echo "$filepath"
 #SD_PATH=$(dirname "$filepath")
 last_file=$(sed -n "s/.*last_file *= *'\([^']*\)'.*/\1/p" {USER_HOME}/printer_data/config/variables.cfg)
 last_file=$(printf "$last_file")
+
+# Fallback to macro parameter if variables.cfg extraction fails or is empty
+if [ -z "$last_file" ] && [ -n "$2" ]; then
+    last_file="$2"
+    filepath="{USER_HOME}/printer_data/gcodes/${last_file}"
+fi
+
 echo "$last_file"
 plr=$last_file
 echo "plr=$plr" 

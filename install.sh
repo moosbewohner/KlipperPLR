@@ -154,8 +154,9 @@ if [ -n "$SUDO_USER" ]; then
     
     echo "Personal path of real users (USER_HOME) : $USER_HOME"
 
-    echo "Execute the chown command of $USER_HOME/printer_data/config/ with $OWNER:$OWNER"
+    echo "Execute the chown command of $USER_HOME/printer_data/config/ and plr/ with $OWNER:$OWNER"
     chown -R "$OWNER":"$OWNER" "$USER_HOME/printer_data/config/"
+    chown -R "$OWNER":"$OWNER" "$USER_HOME/printer_data/plr/"
     echo "Execute the chown command."
 else
     echo "This script is not executed using sudo."
